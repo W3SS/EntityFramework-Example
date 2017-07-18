@@ -54,8 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\Configurations\AdendumConfiguration.cs" />
     <Compile Include="Database\Configurations\Base\BaseConfiguration.cs" />
     <Compile Include="Database\Configurations\NoteConfiguration.cs" />
+    <Compile Include="Database\ContextConfigurationModule.cs" />
+    <Compile Include="Database\Contracts\IDatabaseContext.cs" />
+    <Compile Include="Database\DatabaseContext.cs" />
     <Compile Include="Database\Entities\Adendum.cs" />
     <Compile Include="Database\Entities\Note.cs" />
     <Compile Include="Exceptions\ContextException.cs" />
