@@ -66,6 +66,7 @@
     <Compile Include="Utils\Contracts\IConfigurationModule.cs" />
     <Compile Include="Utils\Contracts\IDbContext.cs" />
     <Compile Include="Utils\DbContextBase.cs" />
+    <Compile Include="Utils\LockUtil.cs" />
     <Compile Include="Utils\SaveUtil.cs" />
   </ItemGroup>
   <ItemGroup>

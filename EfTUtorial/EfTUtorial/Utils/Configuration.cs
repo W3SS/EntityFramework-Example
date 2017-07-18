@@ -13,7 +13,7 @@ namespace EfTUtorial.Utils
         {
             if (_initialized) return;
 
-            lock (_lockObject)
+            using (new LockUtil(_lockObject))
             {
                 if (_initialized) return;
 
