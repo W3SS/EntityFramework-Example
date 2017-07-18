@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\Configurations\Base\BaseConfiguration.cs" />
     <Compile Include="Exceptions\ContextException.cs" />
     <Compile Include="Exceptions\ContextUniqueConstraintFailureException.cs" />
     <Compile Include="Extensions\DbContextExtensions.cs" />
