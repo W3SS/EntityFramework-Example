@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using EfTUtorial.Database;
+using Autofac;
+using EfTUtorial.Autofac;
 using EfTUtorial.Database.Contracts;
 using EfTUtorial.Database.Entities;
-using EfTUtorial.Utils;
 
 namespace EfTUtorial
 {
@@ -13,8 +13,8 @@ namespace EfTUtorial
     {
         static void Main(string[] args)
         {
-            var configuration = new Configuration();
-            IDatabaseContext context = new DatabaseContext(configuration);
+            AutofacConfiguration.RegisterContainer();
+            IDatabaseContext context = AutofacConfiguration.Container.Resolve<IDatabaseContext>();
 
             using (context)
             {
