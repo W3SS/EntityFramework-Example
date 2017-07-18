@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EfTUtorial.Utils.Contracts
 {
-    public interface IDbContext
+    public interface IDbContext : IDisposable
     {
         void Attach<T>(T entity) where T : class, IBaseEntity;
         IQueryable<T> AsQueryable<T>() where T : class, IBaseEntity;

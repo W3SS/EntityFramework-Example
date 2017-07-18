@@ -7,7 +7,7 @@ namespace EfTUtorial.Extensions
     {
         public static void DisableDatabaseInitialization(this DbContext dbContext)
         {
-            var databaseType = typeof(Database);
+            var databaseType = typeof(System.Data.Entity.Database);
             var setInitializer = databaseType.GetMethod("SetInitializer", BindingFlags.Static | BindingFlags.Public);
             var type = dbContext.GetType();
             var setInitializerT = setInitializer.MakeGenericMethod(type);
